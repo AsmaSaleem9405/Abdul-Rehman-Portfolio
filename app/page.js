@@ -220,7 +220,7 @@ function MainPage() {
   {
     title: "UGC Project 2",
     image: "/images/video-bg.jpg",
-    videoUrl: "https://drive.google.com/file/d/1p_cCygSNehC3hBWgnYnVW0yckMowPn8a/view?usp=drive_link", // Paste your link here
+    videoUrl: "https://drive.google.com/drive/folders/1orlyS-TjF1OCPrK_79OJaWKek0Ng2wgj?usp=drive_link", // Paste your link here
   },
    {
     title: "UGC Project 3",
