@@ -213,7 +213,6 @@ function MainPage() {
 
   const frontendProjects = [
     {
-<<<<<<< HEAD
     title: "UGC Project 1",
     image: "/images/video-bg.jpg",
     videoUrl: "https://drive.google.com/drive/folders/1lvqLH3q-IYqbtVNg9GyYxovojZMl5ac7?usp=drive_link", // Paste your link here
@@ -247,43 +246,6 @@ function MainPage() {
     videoUrl: "https://drive.google.com/file/d/1p_cCygSNehC3hBWgnYnVW0yckMowPn8a/view?usp=drive_link", // Paste your link here
   },
 ];
-=======
-      title: "Project One",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-    },
-    {
-      title: "Project Two",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
-    },
-    {
-      title: "Project Three",
-      image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4",
-    },
-    {
-      title: "Project Four",
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3",
-    },
-  ];
-
-  const businessProjects = [
-    {
-      title: "Documentation",
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40",
-    },
-    {
-      title: "Diagramming",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978",
-    },
-    {
-      title: "Workflow",
-      image: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a",
-    },
-    {
-      title: "Case Study",
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3",
-    },
-  ];
->>>>>>> 0559381154b63643936da9190781224baec1b09e
 
   const experienceData = [
     {
@@ -703,11 +665,7 @@ function MainPage() {
               <div className="absolute -inset-1 rounded-2xl bg-linear-to-r from-blue-500 via-blue-900 to-purple-900 blur-lg opacity-70"></div>
 
               <img
-<<<<<<< HEAD
                 src="images/profile1.png"
-=======
-                src="images/profile.png"
->>>>>>> 0559381154b63643936da9190781224baec1b09e
                 alt="profile"
                 className="relative w-56 md:w-72 lg:w-80 rounded-2xl shadow-lg"
               />
@@ -750,11 +708,7 @@ function MainPage() {
             >
               <div className="rounded-xl overflow-hidden bg-black">
                 <Image
-<<<<<<< HEAD
                   src="/images/profile1.png"
-=======
-                  src="/images/profile.png"
->>>>>>> 0559381154b63643936da9190781224baec1b09e
                   alt="Profile"
                   width={400}
                   height={500}
@@ -1016,15 +970,9 @@ function MainPage() {
             >
              UGC
             </button>
-<<<<<<< HEAD
           <button
   onClick={() => setActiveProjectTab("business")}
   className={`px-6 py-2 rounded-full text-sm md:text-base font-medium
-=======
-            <button
-              onClick={() => setActiveProjectTab("business")}
-              className={`px-6 py-2 rounded-full text-sm md:text-base font-medium
->>>>>>> 0559381154b63643936da9190781224baec1b09e
   border transition-all duration-300 relative overflow-hidden
   hover:scale-110 hover:z-10
   ${
@@ -1032,7 +980,6 @@ function MainPage() {
       ? "bg-purple-600 border-purple-400 shadow-lg shadow-pink-500/40 shadow-[0_0_20px_rgba(236,72,153,0.9)]"
       : "bg-[#141414] border-purple-500 shadow-[0_0_12px_rgba(236,72,153,0.6)]"
   }`}
-<<<<<<< HEAD
 >
   Talking Head
 </button>
@@ -1081,44 +1028,6 @@ function MainPage() {
   </div>
 
 
-=======
-            >
-             Talking Head
-            </button>
-          </div>
-        </div>
-
-        {/* PROJECT GRID */}
-        <div className="relative max-w-6xl w-full">
-          <div className="absolute inset-0 bg-purple-700/20 blur-3xl"></div>
-
-          <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8">
-            {(activeProjectTab === "frontend"
-              ? frontendProjects
-              : businessProjects
-            ).map((project, index) => (
-              <div
-                key={index}
-                className="bg-[#0f0f0f] rounded-xl overflow-hidden border border-purple-900/30 hover:scale-[1.02] transition duration-300"
-              >
-                <div className="overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-65 object-cover hover:scale-110 transition duration-500"
-                  />
-                </div>
-
-                {/* OPTIONAL TITLE */}
-                <div className="p-4">
-                  <h3 className="text-lg font-semibold text-white">
-                    {project.title}
-                  </h3>
-                </div>
-              </div>
-            ))}
-          </div>
->>>>>>> 0559381154b63643936da9190781224baec1b09e
         </div>
       </section>
 
