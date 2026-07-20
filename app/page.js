@@ -36,6 +36,7 @@ function SplashScreen() {
 
 /* MAIN PAGE */
 function MainPage() {
+  
   const [darkMode, setDarkMode] = useState(true);
   const [open, setOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -53,7 +54,19 @@ function MainPage() {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
-
+useEffect(() => {
+    // Check if there is a hash in the URL (e.g., #about)
+    const hash = window.location.hash;
+    if (hash) {
+      // Small timeout ensures the DOM components are fully rendered
+      setTimeout(() => {
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    }
+  }, []);
   {
     /*contact us*/
   }
@@ -297,28 +310,30 @@ function MainPage() {
     /*  navbar activation */
   }
   const [activeSection, setActiveSection] = useState("home");
-
-  useEffect(() => {
+useEffect(() => {
+  const handleScroll = () => {
     const sections = document.querySelectorAll("section");
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      {
-        threshold: 0.3,
-        rootMargin: "-80px 0px -80px 0px",
-      },
-    );
+    let current = "";
 
-    sections.forEach((section) => observer.observe(section));
+    sections.forEach((section) => {
+      const top = section.offsetTop - 120;
+      const height = section.offsetHeight;
 
-    return () => observer.disconnect();
-  }, []);
+      if (window.scrollY >= top && window.scrollY < top + height) {
+        current = section.id;
+      }
+    });
+
+    setActiveSection(current);
+  };
+
+  window.addEventListener("scroll", handleScroll);
+
+  handleScroll();
+
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
   return (
     <>
       <div
@@ -409,7 +424,7 @@ function MainPage() {
                         : "hover:text-purple-800 dark:hover:text-purple-800"
                     }`}
                   >
-                    Skills
+                   Skills
                   </li>
                   <li
                     onClick={() => scrollToSection("projects")}

@@ -6,6 +6,20 @@ import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 
 export default function HireMe() {
+  const handleNavClick = (sectionId) => {
+    setMenuOpen(false); // Close mobile menu if open
+
+    if (window.location.pathname === "/") {
+      // If already on the homepage, scroll smoothly right away
+      const element = document.querySelector(`#${sectionId}`);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      // If on /hire or any other page, do a direct location change
+      window.location.href = `/#${sectionId}`;
+    }
+  };
   const [form, setForm] = useState({
     name: "",
     company: "",
@@ -132,55 +146,45 @@ export default function HireMe() {
 
               {/* Desktop Nav */}
               <ul className="hidden md:flex text-sm gap-8">
+              <li
+                onClick={() => handleNavClick("home")}
+                className="cursor-pointer hover:text-purple-500"
+              >
+                Home
+              </li>
+              
                 <li
-                  onClick={() => (window.location.href = "/#home")}
-                  className={`cursor-pointer transition-all duration-200 ${
-                    darkMode ? "text-white" : "text-black"
-                  } hover:text-purple-500`}
-                >
-                  Home
-                </li>
-
-                <li
-                  onClick={() => (window.location.href = "/#about")}
-                  className={`cursor-pointer transition-all duration-200 ${
-                    darkMode ? "text-white" : "text-black"
-                  } hover:text-purple-500`}
+                  onClick={() => handleNavClick("about")}
+                  className="cursor-pointer hover:text-purple-500"
                 >
                   About
                 </li>
-
                 <li
-                  onClick={() => (window.location.href = "/#services")}
-                  className={`cursor-pointer transition-all duration-200 ${
-                    darkMode ? "text-white" : "text-black"
-                  } hover:text-purple-500`}
+                  onClick={() => handleNavClick("skills")}
+                  className="cursor-pointer hover:text-purple-500"
                 >
-                  Services
+                  Skills
                 </li>
-
                 <li
-                  onClick={() => (window.location.href = "/#projects")}
-                  className={`cursor-pointer transition-all duration-200 ${
-                    darkMode ? "text-white" : "text-black"
-                  } hover:text-purple-500`}
+                  onClick={() => handleNavClick("projects")}
+                  className="cursor-pointer hover:text-purple-500"
                 >
                   Projects
                 </li>
-
                 <li
-                  onClick={() => (window.location.href = "/#experience")}
-                  className={`cursor-pointer transition-all duration-200 ${
-                    darkMode ? "text-white" : "text-black"
-                  } hover:text-purple-500`}
+                  onClick={() => handleNavClick("experience")}
+                  className="cursor-pointer hover:text-purple-500"
                 >
                   Experience
                 </li>
               </ul>
               {/* Button */}
-              <button className="hidden md:block bg-purple-600 px-4 py-2 rounded-full text-sm hover:bg-purple-700 text-white shadow-[0_0_15px_rgba(168,85,247,0.7)] animate-pulse hover:shadow-[0_0_25px_rgba(168,85,247,1)] transition-all duration-300">
-                Contact Us
-              </button>
+             <button 
+  onClick={() => handleNavClick("contact")}
+  className="hidden md:block bg-purple-600 px-4 py-2 rounded-full text-sm hover:bg-purple-700 text-white shadow-[0_0_15px_rgba(168,85,247,0.7)] animate-pulse hover:shadow-[0_0_25px_rgba(168,85,247,1)] transition-all duration-300"
+>
+  Contact Us
+</button>
             </div>
           </nav>
 
@@ -216,7 +220,7 @@ export default function HireMe() {
               <ul className="flex flex-col flex-1 justify-center items-center gap-6 text-lg font-bold text-center -mt-50">
                 <li
                   onClick={() => {
-                    window.location.href = "/#home";
+                    router.push("/#home");
                     setMenuOpen(false);
                   }}
                 >
@@ -225,7 +229,7 @@ export default function HireMe() {
 
                 <li
                   onClick={() => {
-                    window.location.href = "/#about";
+                    router.push("/#about");
                     setMenuOpen(false);
                   }}
                 >
@@ -234,16 +238,16 @@ export default function HireMe() {
 
                 <li
                   onClick={() => {
-                    window.location.href = "/#services";
+                    router.push("/#skills");
                     setMenuOpen(false);
                   }}
                 >
-                  Services
+                  Skills
                 </li>
 
                 <li
                   onClick={() => {
-                    window.location.href = "/#projects";
+                    router.push("/#projects");
                     setMenuOpen(false);
                   }}
                 >
@@ -252,19 +256,20 @@ export default function HireMe() {
 
                 <li
                   onClick={() => {
-                    window.location.href = "/#experience";
+                    router.push("/#experience");
                     setMenuOpen(false);
                   }}
                 >
                   Experience
                 </li>
+
                 <li className="w-full flex justify-center mt-4">
                   <button
                     className="bg-purple-600 px-6 py-3 rounded-full text-white w-[50%]
-                    shadow-[0_0_15px_rgba(168,85,247,0.7)]
-                    animate-pulse
-                    hover:shadow-[0_0_30px_rgba(168,85,247,1)]
-                    transition-all duration-300"
+      shadow-[0_0_15px_rgba(168,85,247,0.7)]
+      animate-pulse
+      hover:shadow-[0_0_30px_rgba(168,85,247,1)]
+      transition-all duration-300"
                   >
                     Contact Us
                   </button>
