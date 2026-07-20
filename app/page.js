@@ -204,6 +204,7 @@ function MainPage() {
     { name: "Social Media Content", percentage: 95 },
     { name: "Canva", percentage: 99 },
      { name: "Talking Head", percentage: 99 },
+      { name: "AI Video Editing", percentage: 60 },
   ];
 
   {
@@ -244,6 +245,36 @@ function MainPage() {
     title: "Talking Head Video 2",
     image: "/images/video-bg.jpg",
     videoUrl: "https://drive.google.com/file/d/1p_cCygSNehC3hBWgnYnVW0yckMowPn8a/view?usp=drive_link", // Paste your link here
+  },
+   {
+    title: "Talking Head Video 3",
+    image: "/images/video-bg.jpg",
+    videoUrl: "https://drive.google.com/file/d/1KGkFkBj4OY5bbJNS5g-JSICKwJUIHZLq/view?usp=drive_link", // Paste your link here
+  },
+  {
+    title: "Talking Head Video 4",
+    image: "/images/video-bg.jpg",
+    videoUrl: "https://drive.google.com/file/d/12CyP-q5c_qFCo1onHgcHLFRo97XVXb0k/view?usp=drive_link", // Paste your link here
+  },
+  {
+    title: "Talking Head Video 5",
+    image: "/images/video-bg.jpg",
+    videoUrl: "https://drive.google.com/file/d/1pPQhAZxsOJC07errb9_jdEEWJwoZiryt/view?usp=drive_link", // Paste your link here
+  },
+  {
+    title: "Talking Head Video 6",
+    image: "/images/video-bg.jpg",
+    videoUrl: "https://drive.google.com/file/d/154D_qjYvGZyr3T50s2GPSKmpRoGtBf39/view?usp=drive_link", // Paste your link here
+  },
+  {
+    title: "Talking Head Video 7",
+    image: "/images/video-bg.jpg",
+    videoUrl: "https://drive.google.com/file/d/1PUMJxFl2Rxu3vY_L2BOJNMrZEeEvNx72/view?usp=drive_link", // Paste your link here
+  },
+  {
+    title: "Talking Head Video 8",
+    image: "/images/video-bg.jpg",
+    videoUrl: "https://drive.google.com/file/d/1YodLnMDieGCx-DTQu0LmyerAIS7RUvuc/view?usp=drive_link", // Paste your link here
   },
 ];
 
@@ -557,7 +588,7 @@ function MainPage() {
                 >
                   <TypeAnimation
                     sequence={[
-                      "UGC Video Editor",
+                      "UGC & Talking Head Video Editor",
                       2000,
                       "Social Media Video Editor",
                       2000,
@@ -577,14 +608,8 @@ function MainPage() {
                   darkMode ? "text-white" : "text-black"
                 }`}
               >
-                I’m a passionate UGC & Social Media Video Editor specializing in
-                creating engaging content for TikTok, Instagram Reels, Facebook
-                Ads, YouTube Shorts, and YouTube videos. With expertise in Adobe
-                Premiere Pro and CapCut Pro, I transform raw footage into
-                high-performing videos using dynamic captions, cinematic edits,
-                color grading, and professional sound design. My goal is to help
-                brands grow through creative storytelling and impactful visual
-                content.
+             I'm a passionate UGC & Social Media Video Editor specializing in Talking Head Videos, UGC Ads, TikTok, Instagram Reels, Facebook Ads, YouTube Shorts, and YouTube videos. I transform raw footage into engaging, high-converting content using Adobe Premiere Pro and CapCut Pro, with expertise in dynamic captions, cinematic editing, color grading, sound design, and AI-assisted workflows. My focus is on creating scroll-stopping videos that maximize audience retention, strengthen brand identity, and help businesses grow through compelling visual storytelling.
+
               </p>
 
               {/* BUTTON + ICON ROW */}
@@ -752,11 +777,7 @@ function MainPage() {
                 darkMode ? "text-gray-300" : "text-black"
               }`}
             >
-              I'm a creative UGC & Social Media Video Editor specializing in
-              producing engaging content for TikTok, Instagram Reels, Facebook
-              Ads, YouTube Shorts, and YouTube videos. Using Adobe Premiere Pro
-              and CapCut Pro, I turn raw footage into professional, visually
-              compelling videos that help brands grow their online presence.
+          I'm a creative UGC & Social Media Video Editor specializing in Talking Head Videos, UGC Ads, TikTok, Instagram Reels, Facebook Ads, YouTube Shorts, YouTube videos and Basic AI Video Editing. Using Adobe Premiere Pro and CapCut Pro, I transform raw footage into professional, visually compelling content that helps brands grow their online presence and connect with their audience.
             </p>
 
             <p
@@ -764,12 +785,7 @@ function MainPage() {
                 darkMode ? "text-gray-300" : "text-black"
               }`}
             >
-              From dynamic captions and smooth transitions to color grading,
-              cinematic B-roll, and sound design, I focus on every detail to
-              create content that captures attention, increases audience
-              engagement, and delivers measurable marketing results. Every
-              project is edited with creativity, precision, and a commitment to
-              quality.
+           From dynamic captions, smooth transitions, color grading, cinematic B-roll, and professional sound design to AI-assisted editing and pacing optimization, I focus on every detail to create scroll-stopping videos that boost engagement, improve audience retention, and deliver measurable marketing results. Every project is crafted with creativity, precision, and a commitment to quality.
             </p>
 
             {/* BUTTON */}
