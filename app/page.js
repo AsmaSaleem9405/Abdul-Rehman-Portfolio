@@ -845,16 +845,16 @@ useEffect(() => {
               My Skills
             </h1>
 
-            <p
-              className={`max-w-2xl mx-auto text-sm md:text-base leading-7 ${
-                darkMode ? "text-gray-300" : "text-gray-700"
-              }`}
-            >
-              I specialize in creating engaging, high-quality video content for
-              social media and digital marketing. From editing and storytelling
-              to color grading and sound design, I use industry-standard tools
-              to deliver videos that capture attention and drive results.
-            </p>
+           <p
+  className={`max-w-2xl mx-auto px-4 sm:px-6 text-xs sm:text-sm md:text-base leading-6 sm:leading-7 md:leading-8 ${
+    darkMode ? "text-gray-300" : "text-gray-700"
+  }`}
+>
+  I specialize in creating engaging, high-quality video content for social
+  media and digital marketing. From editing and storytelling to color grading
+  and sound design, I use industry-standard tools to deliver videos that
+  capture attention and drive results.
+</p>
           </div>
 
           {/* FRONTEND SKILLS */}
