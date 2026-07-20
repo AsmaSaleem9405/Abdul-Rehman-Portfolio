@@ -667,7 +667,7 @@ function MainPage() {
               {/* DOWNLOAD CV */}
               <div className="relative inline-block mt-0">
                 <a
-                  href="/documents/ABDUL REHMAN TARIQ.pdf"
+                  href="/documents/ABDUL REHMAN TARIQ1.pdf"
                   download
                   className="relative overflow-hidden border border-purple-500  px-7 py-2 rounded-full flex items-center gap-2 group"
                 >
